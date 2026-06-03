@@ -20,6 +20,7 @@ import { handleErrorApi } from "@/lib/utils";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 import { useAppContext } from "@/components/app-provider";
+import { Loader2 } from "lucide-react";
 
 export default function LoginForm() {
   const loginMutation = useLoginMutation();
@@ -110,8 +111,9 @@ export default function LoginForm() {
                   </FormItem>
                 )}
               />
-              <Button type="submit" className="w-full">
-                Login
+              <Button type="submit" className="w-full" disabled={loginMutation.isPending}>
+                {loginMutation.isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+                {loginMutation.isPending ? "Signing in..." : "Login"}
               </Button>
             </div>
           </form>
