@@ -40,9 +40,9 @@ const OrderReceipt = forwardRef<HTMLDivElement, OrderReceiptProps>(
     return (
       <div
         ref={ref}
-        className="receipt-content p-6 bg-white text-black font-mono text-sm"
+        className="receipt-content p-4 bg-white text-black font-mono text-sm"
         style={{
-          width: "80mm",
+          width: "58mm",
           margin: "0 auto",
         }}
       >
@@ -132,9 +132,9 @@ const OrderReceipt = forwardRef<HTMLDivElement, OrderReceiptProps>(
               padding: 0;
             }
             .receipt-content {
-              width: 80mm;
+              width: 58mm;
               margin: 0;
-              padding: 10mm;
+              padding: 6mm;
               box-shadow: none;
             }
             * {

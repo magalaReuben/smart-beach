@@ -100,3 +100,33 @@ iframe {
     @apply bg-background text-foreground;
   }
 }
+
+@media print {
+  html, body {
+    width: 58mm;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    background: white !important;
+    color: #000 !important;
+  }
+
+  /* Hide non-essential UI for receipts */
+  aside, nav, header, footer, .no-print, .tooltip, .ReactQueryDevtools, .devtools {
+    display: none !important;
+  }
+
+  /* Ensure receipt content fits thermal paper */
+  .receipt-content {
+    width: 58mm !important;
+    padding: 6mm !important;
+    box-shadow: none !important;
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+}
