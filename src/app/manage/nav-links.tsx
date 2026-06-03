@@ -38,7 +38,7 @@ export default function NavLinks({ expanded, setExpanded }: NavLinksProps) {
     <TooltipProvider>
       <aside
         className={cn(
-          'fixed inset-y-0 left-0 z-10 hidden flex-col border-r bg-background sm:flex transition-all duration-200',
+          'fixed inset-y-0 left-0 z-10 hidden min-h-screen flex-col border-r bg-background sm:flex transition-all duration-200 overflow-y-auto',
           expanded ? 'w-48' : 'w-16'
         )}
       >

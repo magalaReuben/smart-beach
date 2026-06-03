@@ -13,7 +13,11 @@ const fontSans = FontSans({
 export const metadata: Metadata = {
   title: 'Smart Beach',
   description: 'Smart Beach management system',
-  icons: "https://i.pinimg.com/736x/94/bf/34/94bf3444f7683e20d2b78693f09e9c31.jpg"
+  icons: "https://i.pinimg.com/736x/94/bf/34/94bf3444f7683e20d2b78693f09e9c31.jpg",
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+  },
 }
 
 export default function RootLayout({

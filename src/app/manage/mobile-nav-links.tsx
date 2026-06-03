@@ -28,7 +28,7 @@ export default function MobileNavLinks() {
         </Button>
       </SheetTrigger>
       <SheetContent side='left' className='sm:max-w-xs'>
-        <nav className='grid gap-6 text-lg font-medium'>
+        <nav className='grid gap-6 text-lg font-medium w-full'>
           <Link
             href='/manage/dashboard'
             className='group flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-primary/10 bg-white text-primary-foreground shadow-sm'
